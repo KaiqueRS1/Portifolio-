@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfólio | JS & Python</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  
+    <section class="hero">
+      <h1>Olá, eu sou <span class="destaque">Kaique Ramos Seabra</span></h1>
+      <p>Estudando JavaScript & Python</p>
+      <a href="#projetos" class="btn">Ver Projetos</a>
+    </section>
+
+   
+    <section class="sobre" id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou apaixonado por resolver problemas com código. Tenho experiência em desenvolvimento web usando JavaScript (React, Node) e Python (Flask, Django). Gosto de criar soluções eficientes e bem estruturadas.
+      </p>
+    </section>
+
+   
+    <section class="projetos" id="projetos">
+      <h2>Projetos</h2>
+
+      <div class="filtros">
+        <button onclick="filtrarProjetos('todos')" class="filter-btn">Todos</button>
+        <button onclick="filtrarProjetos('js')" class="filter-btn">JavaScript</button>
+        <button onclick="filtrarProjetos('python')" class="filter-btn">Python</button>
+      </div>
+
+      <div id="projetos-container" class="grid-projetos">
+        <div class="projeto js">
+          <h3>To-do App (React)</h3>
+          <p>Aplicativo para gerenciamento de tarefas usando React.</p>
+        </div>
+        <div class="projeto python">
+          <h3>Web Scraper (Python)</h3>
+          <p>Coletor de dados automatizado com BeautifulSoup.</p>
+        </div>
+        <div class="projeto js">
+          <h3>Jogo da Memória (JS)</h3>
+          <p>Jogo simples para treinar lógica com JavaScript puro.</p>
+        </div>
+        <div class="projeto python">
+          <h3>API REST com Flask</h3>
+          <p>API para gerenciamento de usuários em Python com Flask.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contato">
+      <h2>Entre em contato</h2>
+      <p>ramoskaique91@gmail.com</p>
+      <div class="redes">
+        <a href="www.linkedin.com/in/kaique-ramos-5b543b25b">LinkedIn</a>
+        <a href="https://github.com/KaiqueRS1">GitHub</a>
+      </div>
+    </section>
+
+    <script>
+      function filtrarProjetos(filtro) {
+        const projetos = document.querySelectorAll(".projeto");
+        projetos.forEach(p => {
+          p.style.display = filtro === "todos" || p.classList.contains(filtro) ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>
